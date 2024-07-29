@@ -1,0 +1,26 @@
+# configuration.yaml
+api:
+  url: "https://data.cityofnewyork.us/resource/t29m-gskq.json"
+  batch_size: 1000
+
+kafka:
+  topic: "nyc_taxi_data"
+  bootstrap_servers: "kafka:9092"
+
+mysql:
+  host: "mysql"
+  port: 3306
+  user: "root"
+  password: "mysql_password_here"
+  database: "taxi_data"
+
+postgres:
+  host: "postgres"
+  port: 5432
+  user: "postgres"
+  password: "postgres_password_here"
+  database: "taxi_data"
+
+spark:
+  master: "local[*]"
+  app_name: "TaxiDataProcessor"
